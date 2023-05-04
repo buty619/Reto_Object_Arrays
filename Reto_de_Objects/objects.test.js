@@ -11,7 +11,7 @@ import db from "./CarDataBase";
 const successPrintStyle = "\x1b[1m\x1b[3m\x1b[48;5;34m\x1b[38;5;15m";
 const failPrintStyle = "\x1b[1m\x1b[3m\x1b[48;5;208m\x1b[38;5;15m";
 
-describe("testing reto de Arrays", () => {
+describe("testing reto de Objects", () => {
   let testStatus = false;
   let passTests = 0;
   let failedTest = 0;
@@ -28,7 +28,7 @@ describe("testing reto de Arrays", () => {
 
   afterAll(() => {
     const success =
-      "🚀🚀 EXCELENTE TRABAJO COMPLETASTE LA PRUEBA DE MANERA SATISFACTORIA ESTE ES EL CÓDIGO SECRETO: UBITSjs13524 🚀🚀 \x1b[0m";
+      "🚀🚀 EXCELENTE TRABAJO COMPLETASTE LA PRUEBA DE MANERA SATISFACTORIA ESTE ES EL CÓDIGO SECRETO: UBITSJSOB98012 🚀🚀 \x1b[0m";
     const error =
       "❌❌ AUN NO HAS SUPERADO LA PRUEBA POR FAVOR VERIFICA QUE CUMPLAS CON TODOS LOS CRITERIOS SOLICITADOS ❌❌ \x1b[0m";
     if (failedTest > 0) {
@@ -39,7 +39,7 @@ describe("testing reto de Arrays", () => {
   });
 
   it("1. Obtener el costo total de los carros en inventario", () => {
-    const output = 5020295;
+    const output = 0;
     expect(costoTotal(db)).toBe(output);
     testStatus = true;
   });

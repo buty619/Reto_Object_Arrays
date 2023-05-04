@@ -4,7 +4,9 @@
   "description": "reto UBITS para repazar conceptos de Arrays y Objectos en Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-arrays": "jest -t 'testing reto de Arrays'",
+    "test-objects": "jest -t 'testing reto de Objects'"
   },
   "keywords": [
     "javascript",

@@ -28,7 +28,7 @@ describe("testing reto de Arrays", () => {
 
   afterAll(() => {
     const success =
-      "🚀🚀 EXCELENTE TRABAJO COMPLETASTE LA PRUEBA DE MANERA SATISFACTORIA ESTE ES EL CÓDIGO SECRETO: UBITSjs13524 🚀🚀 \x1b[0m";
+      "🚀🚀 EXCELENTE TRABAJO COMPLETASTE LA PRUEBA DE MANERA SATISFACTORIA ESTE ES EL CÓDIGO SECRETO: UBITSJSAR13524 🚀🚀 \x1b[0m";
     const error =
       "❌❌ AUN NO HAS SUPERADO LA PRUEBA POR FAVOR VERIFICA QUE CUMPLAS CON TODOS LOS CRITERIOS SOLICITADOS ❌❌ \x1b[0m";
     if (failedTest > 0) {
