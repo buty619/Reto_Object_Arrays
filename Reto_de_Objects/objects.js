@@ -1,108 +1,33 @@
-import dataBase from "./CarDataBase";
-
-// 1. Obtener el costo total de los carros en inventario
-
-function costoTotal(db) {
-  const total = db.reduce((acc, carro) => acc + carro.cost, 0);
-  return total;
-}
-
-costoTotal(dataBase);
-
-// 2. Obtener el promedio de los precios de los carros pares
-
-function promedio(db) {
-  const soloPares = db.filter((carro, index) => index % 2 === 0);
-
-  const costoTotalSoloPares = soloPares.reduce(
-    (acc, carro) => acc + carro.cost,
-    0
-  );
-
-  const costoPromedioPares = costoTotalSoloPares / soloPares.length;
-  return costoPromedioPares;
-}
-
-promedio(dataBase);
-
-// ### 3. Obtener los carros Híbridos
-
-function carrosHibridos(db) {
-  const soloHibridos = db.filter((carro) => carro.fuel_type === "Hybrid");
-  return soloHibridos;
-}
-
-carrosHibridos(dataBase);
-
-// ### 4. Obtener el producto más caro
-
-function carroMasCaro(db) {
-  const carroCostoso = db.reduce(
-    (acc, carro) => {
-      if (acc?.cost < carro?.cost) {
-        return carro;
-      } else {
-        return acc;
-      }
-    },
-    { cost: 0 }
-  );
-  return carroCostoso;
-}
-
-carroMasCaro(dataBase);
-
-// ## 5. Agregar un nuevo producto
-
-function nuevoCarro(db) {
-  const newCar = [
-    ...db,
+const tienda = {
+  nombre: "tu tienda",
+  direccion: "av tu dirección 123",
+  productos: [
     {
-      car_name: "Mercedes-Benz",
-      cost: 98089,
-      model: "Sedan",
-      manufacturer: "Honda",
-      color: "Red",
-      num_doors: 2,
-      cylinder_capacity: 5307,
-      fuel_type: "Hybrid",
-      transmission: "Manual",
-      drive_type: "Rear-wheel drive",
-      horsepower: 787,
+      nombre: "producto 1",
+      descripcion: "esta es la descripción del producto 1",
+      precio: 999,
+      stock: 10,
     },
-  ];
-  return newCar;
-}
-
-nuevoCarro(dataBase);
-
-// ### 6. Eliminar el carro mas económico
-
-function eliminarCarro(db) {
-  const menosCostoso = db.reduce(
-    (acc, carro) => {
-      if (acc?.cost > carro?.cost) {
-        return carro;
-      } else {
-        return acc;
-      }
-    },
-    { cost: 99999999999 }
-  );
-  const sinElMenosCostoso = db.filter(
-    (carro) => carro.cost !== menosCostoso.cost
-  );
-  return sinElMenosCostoso;
-}
-
-eliminarCarro(dataBase);
-
-// aca se exportan todas las funciones para realizar el testing sobre tu solución
-export {
-  costoTotal,
-  promedio,
-  carrosHibridos,
-  carroMasCaro,
-  nuevoCarro,
-  eliminarCarro,
+  ],
+  // 1. Crear un método en el objeto `tienda` llamado `agregarProducto`que permita agregar mas productos al array de productos.
+  agregarProducto: ".. aca resolver el reto ..",
+  // 2. Crear un método en el objeto `tienda` llamado `obtenerProducto` que reciba como parámetro el nombre del producto y devuelva el objeto correspondiente
+  obtenerProducto: ".. aca resolver el reto ..",
+  // 3. Crear un método en el objeto `tienda` llamado `realizarVenta` que reciba como parámetros el nombre del producto y la cantidad vendida, y actualice la cantidad de stock correspondiente.
+  realizarVenta: ".. aca resolver el reto ..",
+  // 4. Crear una función llamada `eliminarProducto` que reciba como parámetro el nombre del producto y lo elimine de la lista de productos.
+  eliminarProducto: ".. aca resolver el reto ..",
 };
+
+// 5. Utilizar el método `Object.create` para crear un nuevo objeto llamado `tiendaOnline`
+const tiendaOnline = ".. aca resolver el reto ..";
+
+// 6. Utilizar el método `Object.keys` para obtener un array con los nombres de las propiedades de los productos de la `tiendaOnline`.
+
+const nombres = ".. aca resolver el reto ..";
+
+// 7. Utilizar el método `Object.values` para obtener un array con todas las cantidades de stock disponibles de la tiendaOnline.
+
+const stock = ".. aca resolver el reto ..";
+
+export { tienda, tiendaOnline, nombres, stock };

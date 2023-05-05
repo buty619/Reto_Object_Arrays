@@ -1,12 +1,4 @@
-import {
-  costoTotal,
-  promedio,
-  carrosHibridos,
-  carroMasCaro,
-  nuevoCarro,
-  eliminarCarro,
-} from "./objects";
-import db from "./CarDataBase";
+import { tienda, tiendaOnline, nombres, stock } from "./objects";
 
 const successPrintStyle = "\x1b[1m\x1b[3m\x1b[48;5;34m\x1b[38;5;15m";
 const failPrintStyle = "\x1b[1m\x1b[3m\x1b[48;5;208m\x1b[38;5;15m";
@@ -38,61 +30,73 @@ describe("testing reto de Objects", () => {
     }
   });
 
-  it("1. Obtener el costo total de los carros en inventario", () => {
-    const output = 0;
-    expect(costoTotal(db)).toBe(output);
-    testStatus = true;
-  });
-  it("2. Obtener el promedio de los precios de los carros pares", () => {
-    const output = 47548.9;
-    expect(promedio(db)).toBe(output);
-    testStatus = true;
-  });
-  it("3. Obtener los carros Híbridos", () => {
-    const output = 24;
-    expect(carrosHibridos(db).length).toBe(output);
-    testStatus = true;
-  });
-  it("4. Obtener el producto más caro", () => {
+  it("1. Crear un método en el objeto `tienda` llamado `agregarProducto`que permita agregar mas productos al array de productos.", () => {
     const output = {
-      car_name: "Mercedes-Benz",
-      cost: 98089,
-      model: "Sedan",
-      manufacturer: "Honda",
-      color: "Red",
-      num_doors: 2,
-      cylinder_capacity: 5307,
-      fuel_type: "Hybrid",
-      transmission: "Manual",
-      drive_type: "Rear-wheel drive",
-      horsepower: 787,
+      nombre: "producto 2",
+      descripcion: "esta es la descripción del producto 2",
+      precio: 999,
+      stock: 10,
     };
-    expect(carroMasCaro(db).car_name).toBe(output.car_name);
-    expect(carroMasCaro(db).cost).toBe(output.cost);
-    expect(carroMasCaro(db).color).toBe(output.color);
-    expect(carroMasCaro(db).cylinder_capacity).toBe(output.cylinder_capacity);
-    expect(carroMasCaro(db).drive_type).toBe(output.drive_type);
+    tienda.agregarProducto(output);
+    expect(tienda.productos[1].nombre).toBe(output.nombre);
+    expect(tienda.productos[1].descripcion).toBe(output.descripcion);
+    expect(tienda.productos[1].precio).toBe(output.precio);
+    expect(tienda.productos[1].stock).toBe(output.stock);
     testStatus = true;
   });
-  it("5. Agregar un nuevo producto", () => {
-    const output = 101;
-    expect(nuevoCarro(db).length).toBe(output);
-    expect(nuevoCarro(db)[100].car_name).toBeDefined();
-    expect(nuevoCarro(db)[100].cost).toBeDefined();
-    expect(nuevoCarro(db)[100].model).toBeDefined();
-    expect(nuevoCarro(db)[100].manufacturer).toBeDefined();
-    expect(nuevoCarro(db)[100].num_doors).toBeDefined();
-    expect(nuevoCarro(db)[100].cylinder_capacity).toBeDefined();
-    expect(nuevoCarro(db)[100].fuel_type).toBeDefined();
-    expect(nuevoCarro(db)[100].transmission).toBeDefined();
-    expect(nuevoCarro(db)[100].drive_type).toBeDefined();
-    expect(nuevoCarro(db)[100].horsepower).toBeDefined();
-    expect(nuevoCarro(db)[100].color).toBeDefined();
+  it("2. Crear un método en el objeto `tienda` llamado `obtenerProducto` que reciba como parámetro el nombre del producto y devuelva el objeto correspondiente.", () => {
+    const output = {
+      nombre: "producto 1",
+      descripcion: "esta es la descripción del producto 1",
+      precio: 999,
+      stock: 10,
+    };
+    expect(tienda.obtenerProducto("producto 1").nombre).toBe(output.nombre);
+    expect(tienda.obtenerProducto("producto 1").descripcion).toBe(
+      output.descripcion
+    );
+    expect(tienda.obtenerProducto("producto 1").precio).toBe(output.precio);
+    expect(tienda.obtenerProducto("producto 1").stock).toBe(output.stock);
     testStatus = true;
   });
-  it("6. Eliminar el carro mas económico", () => {
-    const output = 99;
-    expect(eliminarCarro(db).length).toBe(output);
+  it("3. Crear un método en el objeto `tienda` llamado `realizarVenta` que reciba como parámetros el nombre del producto y la cantidad vendida, y actualice la cantidad de stock correspondiente.", () => {
+    const output = {
+      nombre: "producto 1",
+      descripcion: "esta es la descripción del producto 1",
+      precio: 999,
+      stock: 4,
+    };
+    tienda.realizarVenta(output.nombre, 6);
+    expect(tienda.productos[0].nombre).toBe(output.nombre);
+    expect(tienda.productos[0].descripcion).toBe(output.descripcion);
+    expect(tienda.productos[0].precio).toBe(output.precio);
+    expect(tienda.productos[0].stock).toBe(output.stock);
+    testStatus = true;
+  });
+  it("4. Crear una función llamada `eliminarProducto` que reciba como parámetro el nombre del producto y lo elimine de la lista de productos.", () => {
+    const initialArray = tienda.productos.length;
+    tienda.eliminarProducto("producto 1");
+    const newArray = tienda.productos.length;
+    expect(newArray).toBe(initialArray - 1);
+    testStatus = true;
+  });
+  it("5. Utilizar el método `Object.create` para crear un nuevo objeto llamado `tiendaOnline`.", () => {
+    expect(tiendaOnline.online).toBe(true);
+    tiendaOnline.agregarStock("producto 2", 5);
+    expect(tiendaOnline.productos[0].stock).toBe(15);
+    tiendaOnline.realizarVenta("producto 2", 5);
+    expect(tiendaOnline.productos[0].stock).toBe(10);
+    testStatus = true;
+  });
+  it("6. Utilizar el método `Object.keys` para obtener un array con los nombres de todos los productos en stock de la `tiendaOnline`.", () => {
+    expect(nombres[0]).toBe("nombre");
+    expect(nombres[1]).toBe("descripcion");
+    expect(nombres[2]).toBe("precio");
+    expect(nombres[3]).toBe("stock");
+    testStatus = true;
+  });
+  it("7. Utilizar el método `Object.values` para obtener un array con todas las cantidades de stock disponibles de la tiendaOnline.", () => {
+    expect(stock[0]).toBe(10);
     testStatus = true;
   });
 });
