@@ -1,6 +1,6 @@
 # 🤓 Reto Arrays:
 
-Dado un array de objetos que representan la base de datos de un concesionario y los carros que tiene a disposición (podrás ver estos datos en `carDataBase.js`), crear una serie de funciones que manipulen este array y me devuelvan ciertos valores específicos. Para resolver este reto, debes utilizar los métodos map, reduce, slice, filter, find, pop y push.
+Dado un array de objetos que representan la base de datos de un concesionario y los carros que tiene a disposición (podrás ver estos datos en `carDataBase.js`), crea una serie de funciones que manipulen este array y retornen ciertos valores específicos. Para resolver este reto, debes utilizar los métodos map, reduce, slice, filter, find, pop y push.
 
 ## 💾 Estructura de los objetos del array:
 
@@ -30,15 +30,15 @@ Debe tomar unicamente las posiciones pares del array (ej: `array[0], array[2], a
 
 ### 3. Obtener los carros Híbridos:
 
-Debe tomar el array de carros (`carDataBase.js`) y seleccionar todos los carros cuyo combustible (`fuel_type`) sea de tipo híbrido (`Hybrid`), y devolver un nuevo array con sólo los productos que pertenecen a esa categoría.
+Debe tomar el array de carros (`carDataBase.js`) y seleccionar todos los carros cuyo combustible (`fuel_type`) sea de tipo híbrido (`Hybrid`), y devolver un nuevo array sólo con los productos que pertenecen a esa categoría.
 
 ### 4. Obtener el producto más caro:
 
 Debe tomar el array de carros (`carDataBase.js`) y devolver el objeto que representa el carro más caro.
 
-### 5. Agregar un nuevo producto:
+### 5. Agregar un nuevo carro:
 
-Debe tomar el array de carros (`carDataBase.js`) y agregar un nuevo objeto al carro cons toda la información requerida por la base de datos.
+Debe tomar el array de carros (`carDataBase.js`) y agregar un nuevo objeto al carro con toda la información requerida por la base de datos.
 
 - car_name: String,
 - cost: Number,
@@ -54,12 +54,12 @@ Debe tomar el array de carros (`carDataBase.js`) y agregar un nuevo objeto al ca
 
 ### 6. Eliminar el carro mas económico:
 
-Debe tomar el array de carros (`carDataBase.js`) y eliminar el carro con el valor mas económico (`cost`) del array.
+Debe tomar el array de carros (`carDataBase.js`) y eliminar el carro con el valor más económico (`cost`) del array.
 
 ## 👆🏻 Notas finales
 
 Ten en cuenta que debes crear una **función para resolver cada uno de los puntos**.
 
-si quieres realizar pruebas mientras resuelves los retos dentro de la carpeta principal de este repositorio `Reto_Object_Arrays` puedes ir a la carpeta del reto (en tu shell escribe `cd Reto_de_Arrays`) y luego correr el comando `node arrays.js` para ejecutar el código que tengas en tu reto.
+Si quieres realizar pruebas mientras resuelves los retos dentro de la carpeta principal de este repositorio `Reto_Object_Arrays` puedes ir a la carpeta del reto (en tu shell escribe `cd Reto_de_Arrays`) y luego correr el comando `node arrays.js` para ejecutar el código que tengas en tu reto.
 
 ### 🥳 ¡Buena suerte! 🥳
