@@ -4,9 +4,9 @@ Crear un sistema para manejar las ventas de una tienda de productos electrónico
 
 ## 💾 Estructura del objeto:
 
-Dado un objeto llamado `tienda` que contiene el nombre de la tienda (`string`), su dirección (`string`), un array de productos (`[{..}, {..}, ..]`) y un método para agregar un nuevo producto a la lista.
+Dado un objeto llamado `tienda` que contiene el nombre de la tienda (`string`), su dirección (`string`), un array de productos (`[{..}, {..}, ..]`).
 
-- Cada producto debe ser un objeto con los siguientes campos: nombre (`string`), descripción (`string`), precio (`number`) y stock (`number`)
+- Cada producto debe ser un objeto con los siguientes campos: nombre (`string`), descripción (`string`), precio (`number`) y stock (`number`), donde el nombre es único para cada producto.
 
 ```js
 const tienda = {
