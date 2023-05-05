@@ -36,6 +36,9 @@ luego de clonarlo accede a la carpeta que acabas de clonar e instala las depende
 
 ```bash
 cd Reto_Object_Arrays
+```
+
+```bash
 npm install
 ```
 
