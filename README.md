@@ -1,6 +1,6 @@
 # 🤓 Reto UBITS
 
-Bienvenido a tu reto de Arreglos y Objetos en Javascript para nosotros es un gusto que puedas poner a prueba tus los conocimientos que vienes aprendiendo en nuestros curso de Javascript.
+Bienvenido a tu reto de Arreglos y Objetos en Javascript para nosotros es un gusto que puedas poner a prueba tus conocimientos que vienes aprendiendo en nuestros curso de Javascript.
 
 ## ☑️ Requisitos para realizar el reto
 
@@ -16,7 +16,7 @@ Para poder solucionar este reto de una manera correcta debes seguir los siguient
 
 ### 1. Clonar el reto localmente
 
-Primero debes clonar el reto en tu maquina para que puedas acceder a la información del reto y su estructura, para esto escribe el siguiente comando en tu shell:
+Primero debes clonar el reto en tu máquina para que puedas acceder a la información del reto y su estructura, para esto escribe el siguiente comando en tu shell:
 
 **Si tienes configurada una llave SSH**
 
@@ -32,7 +32,7 @@ git clone https://github.com/buty619/Reto_Object_Arrays.git
 
 ### 2. Instalar dependencias
 
-luego de clonarlo accede a la carpeta que acabas de clonar e instala las dependencias necesarias para el reto (si no conoces el concepto de dependencias no te preocupes no es necesario conocer su funcionamiento para resolver el reto) para esto escribe en tu shell:
+luego de clonarlo accede a la carpeta que acabas de clonar e instala las dependencias necesarias para el reto (si no conoces el concepto de dependencias, no te preocupes! no es necesario conocer su funcionamiento para resolver el reto) para esto escribe en tu shell:
 
 ```bash
 cd Reto_Object_Arrays
@@ -42,23 +42,23 @@ cd Reto_Object_Arrays
 npm install
 ```
 
-✅ listo con estos pasos estas listo para iniciar tu reto mucha suerte ¡¡¡
+✅ listo con estos pasos estas listo para iniciar tu reto mucha suerte !!!
 
 ### 🗒 Estructura del reto
 
-En este repositorio encontraras dos carpetas, la primera [Reto_de_Arrays](https://github.com/buty619/Reto_Object_Arrays/tree/main/Reto_de_Arrays) contiene 3 archivos:
+En este repositorio encontrarás dos carpetas, la primera [Reto_de_Arrays](https://github.com/buty619/Reto_Object_Arrays/tree/main/Reto_de_Arrays) contiene 3 archivos:
 
 - **README.md**: este archivo contiene las instrucciones para resolver el reto por favor léelo cuidadosamente.
-- **arrays.js**: en este archivo colocaras el código con el cual resuelvas el reto, dentro del archivo encontraras algunas pistas e instrucciones.
-- **arrays.test.js**: este archivo código es el que prueba que hayas resolvió el reto correctamente (no te preocupes por entender este código mas adelante podrás estudiar el concepto de test unitarios).
+- **arrays.js**: en este archivo debes desarrollar el código que resuelva el reto, dentro del archivo encontrarás algunas pistas e instrucciones.
+- **arrays.test.js**: este archivo código es el que prueba que hayas resuelto el reto correctamente (no te preocupes por entender este código más adelante podrás estudiar el concepto de test unitarios).
 
 En la segunda capeta [Reto_de_Objects](https://github.com/buty619/Reto_Object_Arrays/tree/main/Reto_de_Objects) contiene 3 archivos:
 
 - **README.md**: este archivo contiene las instrucciones para resolver el reto por favor léelo cuidadosamente.
-- **objects.js**: en este archivo colocaras el código con el cual resuelvas el reto, dentro del archivo encontraras algunas pistas e instrucciones.
-- **objects.test.js**: este archivo código es el que prueba que hayas resolvió el reto correctamente (no te preocupes por entender este código mas adelante podrás estudiar el concepto de test unitarios).
+- **arrays.js**: en este archivo debes desarrollar el código que resuelva el reto, dentro del archivo encontrarás algunas pistas e instrucciones.
+- **arrays.test.js**: este archivo código es el que prueba que hayas resuelto el reto correctamente (no te preocupes por entender este código más adelante podrás estudiar el concepto de test unitarios).
 
-ademas de estas carpetas podrás ver otros archivos como:
+Además de estas carpetas podrás ver otros archivos como:
 
 - .gitignore
 - babel.config.json
@@ -88,12 +88,12 @@ para ambos casos se correrán los test de tu código donde si tienes correctamen
   <img src="./img/m1.png"/>
 </p>
 
-pero si por el contrario tienes algún error veras mensaje como:
+si por el contrario tienes algún error verás un mensaje como:
 
 <p align="center">
   <img src="./img/m2.png"/>
 </p>
 
-en caso de completar la prueba exitosamente podrás ver el mensaje mencionado el cual expondrá un código secreto el cual podrás usar para validar la solución en nuestra plataforma UBITS.
+en caso de completar la prueba exitosamente podrás ver el mensaje mencionado que expondrá un código secreto el cual podrás usar para validar la solución en nuestra plataforma UBITS.
 
 ### 🥳 ¡Buena suerte! 🥳
